@@ -266,3 +266,51 @@ html {
 .flow {
   background: #f4f4f4;
 }
+/* --- ここからスマホ用の魔法 --- */
+@media (max-width: 768px) {
+  /* 全体の文字サイズを少し調整 */
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ロゴやナビゲーションを縦並びにする（もし重なっていたら） */
+  .header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* リンクが多い時に折り返す */
+    justify-content: center;
+    gap: 10px;
+  }
+
+  /* メインビジュアルの余白を調整 */
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  /* 「こんなお悩みありませんか？」のリストを中央に寄せすぎない */
+  .problem ul {
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  /* ボタンをスマホで押しやすく大きくする */
+  .btn {
+    display: block; /* 横幅いっぱいにする */
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 15px;
+  }
+}
+/* --- ここまで --- */
