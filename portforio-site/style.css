@@ -313,4 +313,27 @@ html {
     padding: 15px;
   }
 }
-/* --- ここまで --- */
+/* --- ここまで --- *//* Worksセクションの重なりを物理的に防ぐ設定 */
+.works .container {
+    display: flex;
+    flex-wrap: wrap;       /* 横に並びきらない時は自動で下に送る */
+    justify-content: center;
+    gap: 40px;            /* カード同士の隙間を広めにとる */
+    padding: 50px 0;
+    height: auto;         /* 高さを固定しない（重要！） */
+}
+
+.work-card {
+    background: #fff;
+    width: 300px;         /* 横幅を指定 */
+    min-height: 400px;    /* 最低限の高さ */
+    height: auto;         /* 中身が増えても伸びるようにする */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ボタンを下に配置 */
+}
+
+
